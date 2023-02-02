@@ -15,18 +15,15 @@ public class Authors {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column (name = "aid")
-    int id;
+    private int id;
 
     @Column
-    String name;
+    private String name;
 
     @Column
-    LocalDate dob;
+    private LocalDate dob;
 
     @Column
-    Gender gender;
-
-
-
+    private Gender gender;
 
 }

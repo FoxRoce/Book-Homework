@@ -15,6 +15,11 @@ public class Controller implements AutoCloseable {
 
     private HibernateContext model = new HibernateContext();
 
+    @Override
+    public void close() throws Exception {
+        model.close();
+    }
+/*
     public void initStudentsAndCourses() {
         Session s = model.getSession();
         Transaction tx = s.beginTransaction();
@@ -58,11 +63,6 @@ public class Controller implements AutoCloseable {
         session.clear();
 
         session.getTransaction().commit();
-    }
-
-    @Override
-    public void close() throws Exception {
-        model.close();
     }
 
     public void addPerson(String name, LocalDate dob, Passport passport) {
@@ -198,5 +198,5 @@ public class Controller implements AutoCloseable {
             }
         }
     }
-
+*/
 }

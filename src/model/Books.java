@@ -10,18 +10,21 @@ public class Books {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column (name = "isbn")
-    int id;
+    private int id;
 
     @Column
-    LocalDate dob;
+    private String isbn;
 
     @Column
-    int edition;
+    private LocalDate dob;
 
     @Column
-    String title;
+    private int edition;
 
     @Column
-    int author;
+    private String title;
+
+    @ManyToMany
+    @Column
+    private int author;
 }
