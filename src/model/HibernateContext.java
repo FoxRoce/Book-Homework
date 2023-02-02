@@ -29,9 +29,9 @@ public class HibernateContext implements AutoCloseable {
 
             configuration.setProperties(props);
 
-//            configuration.addAnnotatedClass(Pizza.class);
-//            configuration.addAnnotatedClass(Customer.class);
-//            configuration.addAnnotatedClass(DeliveryBoi.class);
+            configuration.addAnnotatedClass(Authors.class);
+            configuration.addAnnotatedClass(Books.class);
+            configuration.addAnnotatedClass(Stores.class);
 //            configuration.addAnnotatedClass(Order.class);
 //            configuration.addAnnotatedClass(DeliveryItem.class);
 
